@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Google Reviews K1 Fn</title>
+      <link rel="stylesheet" href="css/grw-styles.css">
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_ySl0BgjwIhvbF5_GEAfFieIfJqZlu3U&libraries=places"></script> 
+      <script src="src/grw.js"></script>
+   </head>
+   <body>
+      <div id="widget"></div>
+      <script>
+         $GrwJS.init({
+         	target:'#widget',
+         	placeid:'ChIJSVEDHe8Bm0cRDBIq8pDhPOw', //Google place ID
+         	theme:'light', //dark or light
+         	numOfWords:30, //max number of words for each review. default:20,
+         	horizontal:true, //display reviews in a horizontal slider if true; otherwise, display reviews vertically; true as default 
+         	autoScroll:true, //automatically scroll the reivew horizontally; horizontal has to be set to true; false as default
+          scrollInterval:8 //an interval on how often to scroll the review horizontally; default: 8s
+         });
+      </script>
+   </body>
+</html>
