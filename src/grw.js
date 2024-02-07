@@ -59,20 +59,20 @@
         var rm_link = GRW.helpers.createElem('a',{
           class:'rm-link'
         });
-        rm_link.textContent = 'Read More';
+        rm_link.textContent = 'Mehr zeigen';
         rm_link_wrapper.appendChild(rm_link);
         elem.parentElement.appendChild(rm_link_wrapper);
         rm_link.addEventListener('click',function(){
           if(this.getAttribute('data-clicked') !== 'true')
           {
             elem.textContent = text;
-            this.textContent = 'Read Less';
+            this.textContent = 'Weniger zeigen';
             this.setAttribute('data-clicked',true);
           }
           else
           {
             elem.textContent = trimmedText;
-            this.textContnet = 'Read More';
+            this.textContnet = 'Mehr zeigen';
             this.setAttribute('data-clicked',false);
           }
 
