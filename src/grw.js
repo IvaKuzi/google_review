@@ -59,20 +59,20 @@
         var rm_link = GRW.helpers.createElem('a',{
           class:'rm-link'
         });
-        rm_link.textContent = 'Mehr zeigen';
+        rm_link.textContent = 'Read More';
         rm_link_wrapper.appendChild(rm_link);
         elem.parentElement.appendChild(rm_link_wrapper);
         rm_link.addEventListener('click',function(){
           if(this.getAttribute('data-clicked') !== 'true')
           {
             elem.textContent = text;
-            this.textContent = 'Weniger zeigen';
+            this.textContent = 'Read Less';
             this.setAttribute('data-clicked',true);
           }
           else
           {
             elem.textContent = trimmedText;
-            this.textContnet = 'Mehr zeigen';
+            this.textContnet = 'Read More';
             this.setAttribute('data-clicked',false);
           }
 
@@ -187,7 +187,7 @@
     var header_wrapper = GRW.helpers.createElem('div',{
                   class:'grw-business-header grw-clear-fix'
                 });
-    header_wrapper.innerHTML = '<div class="grw-header-content-wrapper"><span class="grw-business-name"><a href="'+place_url+'" rel="nofollow" target="_blank" title="'+place_name+'">'+place_name+'</a></span><div class="grw-google-rating-content"><div class="grw-google-star-rating-wrapper"><div class="grw-google-star-rating" style="width:'+Math.round(67*place_rating/5)+'px"></div></div></div><div class="grw-rating-value">'+place_rating+' von 5 Sternen</div></div>';
+    header_wrapper.innerHTML = '<div class="grw-header-content-wrapper"><span class="grw-business-name"><a href="'+place_url+'" rel="nofollow" target="_blank" title="'+place_name+'">'+place_name+'</a></span><div class="grw-google-rating-content"><div class="grw-google-star-rating-wrapper"><div class="grw-google-star-rating" style="width:'+Math.round(67*place_rating/5)+'px"></div></div></div><div class="grw-rating-value">'+place_rating+' out of 5 stars</div></div>';
 
     return header_wrapper;
   };
